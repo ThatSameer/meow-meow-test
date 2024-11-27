@@ -15,8 +15,8 @@ describe('AppController', () => {
   });
 
   describe('root', () => {
-    it('should return "Hello World!"', () => {
-      expect(appController.getHello()).toBe('Hello World!');
+    it('should return the id from the route params', () => {
+      expect(appController.getNextDelivery('123')).toBe('The id is 123');
     });
   });
 });

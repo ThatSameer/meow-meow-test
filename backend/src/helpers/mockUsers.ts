@@ -61,6 +61,38 @@ const mockUsers: User[] = [
       },
     ],
   },
+  {
+    id: '4',
+    firstName: 'Max',
+    lastName: 'William',
+    email: 'maxwilliam@fake.com',
+    cats: [
+      {
+        name: 'Bella',
+        subscriptionActive: true,
+        breed: 'Turkish Van',
+        pouchSize: 'A',
+      },
+      {
+        name: 'Nella',
+        subscriptionActive: true,
+        breed: 'Ragdoll',
+        pouchSize: 'B',
+      },
+      {
+        name: 'Charlie',
+        subscriptionActive: true,
+        breed: 'Bengal',
+        pouchSize: 'C',
+      },
+      {
+        name: 'Tigger',
+        subscriptionActive: false,
+        breed: 'Abyssinian',
+        pouchSize: 'D',
+      },
+    ],
+  },
 ];
 
 export default mockUsers;

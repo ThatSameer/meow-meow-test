@@ -1,4 +1,4 @@
-export type PouchSizes = 'A' | 'B' | 'C' | 'D' | 'E' | 'F';
+import { PouchSizes } from 'src/helpers/pouchPrices';
 
 export interface Cat {
   name: string;

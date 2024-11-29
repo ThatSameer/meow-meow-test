@@ -1,7 +1,11 @@
 import { Box, Button, Stack, Typography } from '@mui/material';
 import { FC } from 'react';
 import { GetNextDelivery } from '../../interfaces/GetNextDelivery';
-import { CatImage, CatImageContainer } from './DeliveryInfo.styles';
+import {
+  CatImage,
+  CatImageContainer,
+  ContainerStack,
+} from './DeliveryInfo.styles';
 
 interface DeliveryInfoProps {
   deliveryInfo: GetNextDelivery;
@@ -12,7 +16,7 @@ const DeliveryInfo: FC<DeliveryInfoProps> = ({ deliveryInfo, image }) => {
   return (
     <>
       <Box>
-        <Stack direction={{ md: 'row' }} alignItems={'center'} gap={'24px'}>
+        <ContainerStack direction={{ md: 'row' }}>
           <CatImageContainer>
             <CatImage
               component="img"
@@ -24,6 +28,7 @@ const DeliveryInfo: FC<DeliveryInfoProps> = ({ deliveryInfo, image }) => {
           <Stack
             textAlign={{ md: 'left' }}
             alignItems={{ xs: 'center', md: 'start' }}
+            paddingRight={{ md: 1 }}
             gap={'12px'}
           >
             <Typography variant="h6" fontWeight={'bold'} color="green">
@@ -39,7 +44,7 @@ const DeliveryInfo: FC<DeliveryInfoProps> = ({ deliveryInfo, image }) => {
               </Box>
             )}
 
-            <Stack direction={'row'} gap={'12px'}>
+            <Stack direction={'row'} gap={'12px'} paddingBottom={2}>
               <Button variant="contained" sx={{ backgroundColor: 'green' }}>
                 SEE DETAILS
               </Button>
@@ -51,7 +56,7 @@ const DeliveryInfo: FC<DeliveryInfoProps> = ({ deliveryInfo, image }) => {
               </Button>
             </Stack>
           </Stack>
-        </Stack>
+        </ContainerStack>
       </Box>
     </>
   );
